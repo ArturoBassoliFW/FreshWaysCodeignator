@@ -1,0 +1,296 @@
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:where([hidden]:not([hidden="until-found"])) {
+  display: none !important;
+}
+
+:where(html) {
+  -webkit-text-size-adjust: none;
+  color-scheme: dark light;
+  tab-size: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(html:focus-within) {
+    scroll-behavior: smooth;
+  }
+}
+
+:where(body) {
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(button) {
+  all: unset;
+}
+
+:where(input, button, textarea, select) {
+  font: inherit;
+  color: inherit;
+}
+
+:where(textarea) {
+  resize: vertical;
+  resize: block;
+}
+
+:where(button, label, select, summary, [role="button"], [role="option"]) {
+  cursor: pointer;
+}
+
+:where(:disabled) {
+  cursor: not-allowed;
+}
+
+:where(label:has(> input:disabled), label:has(+ input:disabled)) {
+  cursor: not-allowed;
+}
+
+:where(a) {
+  color: inherit;
+  text-underline-offset: 0.2ex;
+}
+
+:where(ul, ol) {
+  list-style: none;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+  display: block;
+}
+
+:where(img, picture, svg, video) {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+}
+
+:where(h1, h2, h3) {
+  line-height: calc(1em + 0.5rem);
+  text-wrap: balance;
+}
+
+:where(hr) {
+  border: none;
+  border-block-start: 1px solid;
+  color: inherit;
+  block-size: 0;
+  overflow: visible;
+}
+
+:where(:focus-visible) {
+  outline: 3px solid CanvasText;
+  box-shadow: 0 0 0 5px Canvas;
+  outline-offset: 1px;
+}
+
+:where(:focus-visible, :target) {
+  scroll-margin-block: 8vh;
+}
+
+:where(.visually-hidden:not(:focus-within, :active)) {
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ROOT */
+
+:root {
+  /* colors */
+  --bluefresh-1000: rgb(32, 30, 82);
+  --bluefresh-700: rgb(98, 97, 134);
+  --bluefresh-400: rgb(164, 164, 186);
+  --bluefresh-100: rgb(230, 231, 238);
+  --menoventi-1000: rgb(110, 150, 206);
+  --menoventi-700: rgb(153, 181, 221);
+  --menoventi-400: rgb(195, 212, 235);
+  --menoventi-100: rgb(238, 243, 251);
+  --piuquattro-1000: rgb(136, 198, 156);
+  --piuquattro-700: rgb(171, 215, 186);
+  --piuquattro-400: rgb(205, 231, 215);
+  --piuquattro-100: rgb(241, 248, 246);
+  --ambiente-1000: rgb(214, 194, 154);
+  --ambiente-700: rgb(226, 212, 185);
+  --ambiente-400: rgb(237, 230, 215);
+  --ambiente-100: rgb(248, 247, 245);
+  --aragosta: rgb(237, 117, 97);
+  --albicocca: rgb(244, 187, 102);
+  --zebra: rgb(223, 226, 102);
+  --asparago: rgb(120, 163, 107);
+  --ghiaccio: rgb(144, 209, 220);
+  --caramella: rgb(206, 163, 200);
+  --dark: rgb(36, 35, 54);
+  --light: rgb(252, 253, 255);
+
+  /* font size */
+  --fs-huge: 3.5rem;
+  --fs-big: 2.5rem;
+  --fs-large: 1.5rem;
+  --fs-regular: 1rem;
+  --fs-small: 0.875rem;
+}
+
+/* UTILITIES */
+
+/* UTILITIES > color */
+
+.bg-menoventi100 {
+  background: var(--menoventi-100);
+}
+
+.bg-bluefresh1000 {
+  background: var(--bluefresh-1000);
+}
+
+/* UTILITIES > text */
+
+.bold {
+  font-weight: 900;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.text-huge {
+  font-size: var(--m-huge-fs);
+}
+
+.text-big {
+  font-size: var(--m-big-fs);
+}
+
+.text-large {
+  font-size: var(--m-large-fs);
+}
+
+.text-regular {
+  font-size: var(--m-regular-fs);
+}
+
+.text-small {
+  font-size: var(--m-small-fs);
+}
+
+/* GENERAL */
+
+* {
+  color: var(--bluefresh-1000);
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background: var(--light);
+}
+
+section {
+  padding-block: 8rem;
+}
+
+.container {
+  width: 65rem;
+}
+
+@media (max-width: 575px) {
+  .container,
+  .container-sm {
+    width: auto;
+  }
+}
+
+/* GENERAL > text */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+p {
+  font-weight: 300;
+}
+
+.pretitle {
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+/* GENERAL > button */
+
+.btn {
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--menoventi-1000);
+  border-color: var(--menoventi-1000);
+}
+
+.btn-primary:hover {
+  background: var(--bluefresh-1000);
+  border-color: var(--bluefresh-1000);
+}
+
+/* Header */
+
+nav > div:nth-child(1) img {
+  height: 3.5rem;
+}
+
+nav > div > div > ul:nth-child(2) img {
+  height: 1.5rem;
+}
+
+/* HOME */
+
+/* HOME > Hero image */
+
+.hero-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* HOME > Services */
+
+.servicesOffered .card p {
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
