@@ -29,39 +29,51 @@
                 <h2>Services we offer</h2>
             </div>
             <div class="row gap-3">
-                <div class="card col-lg">
+                <div class="card col-lg bg-ambiente1000">
                     <div class="card-body">
-                        <div class="cardTitle">
-                            <img class="bi" src="<?php echo 'asset/images/svg/arrowRight.svg'; ?>" alt="right arrow" aria-hidden="true" />
-                            <h3>Logistics</h3>
+                        <div class="cardTitle d-flex align-items-center gap-1">
+                            <?php echo file_get_contents('asset/images/svg/logisticIcon.svg'); ?>
+                            <h3 class="cl-light">Logistics</h3>
                         </div>
-                        <p>Optimise and streamline your supply chain with our integrated logistics solutions. Our experienced team, state-of-the-art headquarters and rich history of success ensure Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it'sOur highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's...
+                        <p class="cl-light">Optimise and streamline your supply chain with our integrated logistics solutions. Our experienced team, state-of-the-art headquarters and rich history of success ensure Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it'sOur highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's...
                         </p>
                         <a class="icon-link icon-link-hover" href="#">
-                            Icon link
-                            <img class="bi" src="<?php echo 'asset/images/svg/arrowRight.svg'; ?>" alt="right arrow" aria-hidden="true" />
+                            <button type="button" class="btn btn-icon-link cl-light">Learn more</button>
+                            <div class="bi" alt="right arrow" aria-hidden="true">
+                                <?php echo file_get_contents('asset/images/svg/arrowRight.svg'); ?>
+                            </div>
                         </a>
                     </div>
                 </div>
-                <div class="card col-lg">
+                <div class="card col-lg bg-piuquattro1000">
                     <div class="card-body">
-                        <h3>Customs</h3>
-                        <p>Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it'sOur highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's
+                        <div class="cardTitle d-flex align-items-center gap-1">
+                            <?php echo file_get_contents('asset/images/svg/customsIcon.svg'); ?>
+                            <h3 class="cl-light">Customs</h3>
+                        </div>
+                        <p class="cl-light">Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it'sOur highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's
                         </p>
                         <a class="icon-link icon-link-hover" href="#">
-                            Icon link
-                            <img class="bi" src="<?php echo 'asset/images/svg/arrowRight.svg'; ?>" alt="right arrow" aria-hidden="true" />
+                            <button type="button" class="btn btn-icon-link cl-light">Learn more</button>
+                            <div class="bi" alt="right arrow" aria-hidden="true">
+                                <?php echo file_get_contents('asset/images/svg/arrowRight.svg'); ?>
+                            </div>
                         </a>
                     </div>
                 </div>
-                <div class="card col-lg">
+                <div class="card col-lg bg-menoventi1000">
                     <div class="card-body">
-                        <h3>Transport</h3>
-                        <p>At Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to your At Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to yourAt Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to yourAt Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to your...
+                        <div class="cardTitle d-flex align-items-center gap-1">
+                            <?php echo file_get_contents('asset/images/svg/transportIcon.svg'); ?>
+                            <h3 class="cl-light">Transport</h3>
+                        </div>
+                        <p class="cl-light">At Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to your At Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to yourAt Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to yourAt Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to your...
                         </p>
                         <a class="icon-link icon-link-hover" href="#">
-                            Icon link
-                            <img class="bi" src="<?php echo 'asset/images/svg/arrowRight.svg'; ?>" alt="right arrow" aria-hidden="true" />
+                            <button type="button" class="btn btn-icon-link cl-light">Learn more</button>
+                            <div class="bi" alt="right arrow" aria-hidden="true">
+                                <?php echo file_get_contents('asset/images/svg/arrowRight.svg'); ?>
+                            </div>
                         </a>
                     </div>
                 </div>
