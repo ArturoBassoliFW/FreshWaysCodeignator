@@ -18,7 +18,7 @@
 </head>
 
 <body class="bg-light">
-  <nav class="navbar navbar-expand-lg sticky-top bg-light">
+  <nav class="navbar navbar-expand-lg sticky-top bg-light shadow-sm">
     <div class="container-fluid mx-5">
       <a class="navbar-brand" href="home_page"><img src="<?php echo 'asset/images/svg/FreshWaysLogo.svg'; ?>" alt="Fresh Ways Logo" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

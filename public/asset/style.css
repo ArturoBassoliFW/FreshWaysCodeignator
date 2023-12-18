@@ -30,10 +30,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-:where(button) {
-  all: unset;
-}
-
 :where(input, button, textarea, select) {
   font: inherit;
   color: inherit;
@@ -81,6 +77,10 @@
 :where(h1, h2, h3) {
   line-height: calc(1em + 0.5rem);
   text-wrap: balance;
+}
+
+p {
+  margin: 0;
 }
 
 :where(hr) {
@@ -180,6 +180,10 @@
   color: var(--light);
 }
 
+.fill-light {
+  fill: var(--light);
+}
+
 /* UTILITIES > text */
 
 .bold {
@@ -228,6 +232,23 @@
   padding-top: 0;
 }
 
+/* UTILITIES > cirlce div */
+
+.circular {
+  border-radius: 50%;
+}
+
+/* UTILITIES > accordion */
+
+.accordion {
+  --bs-accordion-color: var(--bluefresh-1000);
+  --bs-accordion-bg: var(--light);
+  --bs-accordion-border-color: var(--menoventi-100);
+  --bs-accordion-btn-color: var(--bluefresh-1000);
+  --bs-accordion-btn-focus-border-color: var(--bluefresh-400);
+  --bs-accordion-active-bg: var(--menoventi-100);
+}
+
 /* GENERAL */
 
 * {
@@ -260,6 +281,7 @@ h4,
 h5,
 h6 {
   font-weight: 900;
+  margin: 0;
 }
 
 p {
@@ -268,10 +290,6 @@ p {
 
 .pretitle {
   text-transform: uppercase;
-}
-
-h2 {
-  margin-bottom: 2rem;
 }
 
 /* GENERAL > svg */
@@ -313,7 +331,7 @@ a:hover {
 }
 
 .icon-link {
-  transition:all .15s ease-in-out
+  transition: all .15s ease-in-out
 }
 
 .icon-link:hover {
@@ -342,10 +360,6 @@ nav>div>div>ul:nth-child(2) img {
 
 /* HOME > Services */
 
-.servicesOffered>div:last-child {
-  margin-top: 1rem;
-}
-
 .servicesOffered .card {
   border: none;
 }
@@ -357,22 +371,10 @@ nav>div>div>ul:nth-child(2) img {
   overflow: hidden;
 }
 
-.servicesOffered .card .cardTitle {
-  margin: 0 0 .5rem 0;
-}
-
-.servicesOffered .card .cardTitle {
-  margin: 0 0 .5rem 0;
-}
-
 .servicesOffered .card .cardTitle svg {
   width: 2rem;
   fill: var(--light);
   opacity: .4;
-}
-
-.servicesOffered .card .cardTitle h3 {
-  margin: 0;
 }
 
 .servicesOffered .card .icon-link .bi {
@@ -383,7 +385,11 @@ nav>div>div>ul:nth-child(2) img {
 
 /* ABOUT US > companyHistory */
 
-.companyHistory > div:first-child svg {
+.companyHistory .cloudHistoryContainer {
+  padding: 0 8rem 8rem;
+}
+
+.companyHistory>div:first-child svg {
   fill: var(--light);
 }
 
@@ -393,15 +399,19 @@ nav>div>div>ul:nth-child(2) img {
 
 .companyHistory .cloudHistoryContainer p {
   position: absolute;
-  top: 53%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto;
 }
 
+.companyHistory .cloudTail svg {
+  width: 50%;
+}
+
 /* ABOUT US > locations */
 
-.locations > .container > .row:last-child > * {
+.locations>.container>.row:last-child>.col>* {
   height: 8rem;
   width: auto;
 }
@@ -412,14 +422,125 @@ nav>div>div>ul:nth-child(2) img {
   fill: var(--piuquattro-400);
 }
 
-.team > .container:first-child svg {
+.team>.container:first-child svg {
   height: 4rem;
   width: auto;
-  margin-block: 2rem;
-}
-
-.team > .container-fluid:last-child svg {
-  max-height: 14rem;
-  padding: 0;
   margin-block: 4rem;
 }
+
+.team>.container-fluid {
+  margin-block: 8rem;
+}
+
+.team>.container-fluid:last-child svg {
+  max-height: 14rem;
+  padding: 0;
+}
+
+/* OUR SERVICES */
+
+/* OUR SERVICES > general */
+
+.logisticsServices .sectionTitle svg, .customsServices .sectionTitle svg, .transportServices .sectionTitle svg {
+  width: 3rem;
+}
+
+.sectionTitle h2 {
+  width: auto;
+  margin: 0;
+}
+
+.ourServices .plusInfo .col-auto {
+  width: 12rem;
+  text-align: center;
+}
+
+.ourServices .plusInfo svg {
+  width: 3rem;
+  fill: var(--bluefresh-1000);
+}
+
+/* OUR SERVICES > hr */
+
+.ourServices .hr {
+  padding-block: 8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.ourServices .hr1 {
+  background-image: url('images/warehouse-hr.jpg');
+}
+
+.ourServices .hr2 {
+  background-image: url('images/customs-hr.jpg');
+}
+
+.ourServices .hr3 {
+  background-image: url('images/transport-hr.png');
+}
+
+/* OUR SERVICES > Logistics */
+
+.logisticsServices .sectionTitle {
+  color: var(--ambiente-1000);
+  fill: var(--ambiente-1000);
+}
+
+/* OUR SERVICES > Customs */
+
+.customsServices .sectionTitle {
+  color: var(--piuquattro-1000);
+  fill: var(--piuquattro-1000);
+}
+
+/* OUR SERVICES > Transport */
+
+.transportServices .sectionTitle {
+  color: var(--menoventi-1000);
+  fill: var(--menoventi-1000);
+}
+
+/* OUR SERVICES > Transport > tem icon */
+
+.transportServices .circular {
+  aspect-ratio: 1/1;
+  width: 10rem;
+}
+
+.transportServices .circular:nth-child(1) {
+  background: var(--menoventi-1000);
+}
+
+.transportServices .circular:nth-child(2) {
+  background: var(--piuquattro-1000);
+}
+
+.transportServices .circular:nth-child(3) {
+  background: var(--ambiente-1000);
+}
+
+.transportServices .circular svg {
+  width: 4rem;
+  fill: var(--light);
+}
+
+.transportServices .circular p {
+  color: var(--light);
+}
+
+/* OUR SERVICES > Transport > flags */
+
+.transportServices .flags{
+  background: var(--menoventi-100);
+  width: 24rem;
+}
+
+.transportServices .flags ul li svg{
+  width: 2rem;
+}
+
+/* DOCUMENTS */
+
+/* DOCUMENTS > accordion */
