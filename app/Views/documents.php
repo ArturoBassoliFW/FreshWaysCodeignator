@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col mt-5">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb align-items-center">
           <li class="breadcrumb-item"><a href="home_page"><img src="<?php echo 'asset/images/svg/home.svg'; ?>" style="width: 1.2rem;" alt="Home icon" /></a></li>

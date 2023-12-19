@@ -27,10 +27,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0 align-items-center">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home_page">Home</a>
+          <a href="home_page" <?php if($active=="home_page") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> >Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a  <?php if($active=="about_us") {echo 'class="nav-link dropdown-toggle active"';} else {echo 'class="nav-link dropdown-toggle"';}?> href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               About us
             </a>
             <ul class="dropdown-menu">
@@ -40,7 +40,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a <?php if($active=="our_services") {echo 'class="nav-link dropdown-toggle active"';} else {echo 'class="nav-link dropdown-toggle"';}?> href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Our Services
             </a>
             <ul class="dropdown-menu">
@@ -50,13 +50,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="documents">Useful documents</a>
+            <a <?php if($active=="documents") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="documents">Useful documents</a>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
           <li class="nav-item">
             <a class="nav-link" href="contact_us">
-              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" <?php if($active=="contact_us") {echo 'class="btn btn-primary btn-primary-active"';} else {echo 'class="btn btn-primary"';}?> class="btn btn-primary">Primary</button>
             </a>
           </li>
           <li class="nav-item">

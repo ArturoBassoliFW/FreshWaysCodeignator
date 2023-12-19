@@ -111,6 +111,11 @@ p {
   border: 0 !important;
 }
 
+ol,
+ul {
+  padding: 0;
+}
+
 /* ROOT */
 
 :root {
@@ -249,6 +254,59 @@ p {
   --bs-accordion-active-bg: var(--menoventi-100);
 }
 
+/* UTILITIES > dropdown */
+
+.dropdown-menu {
+  --bs-dropdown-bg: var(--light);
+  --bs-dropdown-border-color: var(--menoventi-100);
+}
+
+.dropdown-item {
+  color: var(--bluefresh-400);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: var(--bluefresh-1000);
+  background-color: var(--bluefresh-100);
+}
+
+/* UTILITIES > navbar */
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--bluefresh-1000);
+  font-weight: 900;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--bluefresh-1000);
+}
+
+.nav-link {
+  color: var(--bluefresh-400);
+}
+
+/* UTILITIES > breadcrumb */
+
+.breadcrumb-item.active {
+  color: var(--bluefresh-1000);
+  font-weight: 900;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: var(--bluefresh-1000);
+  font-weight: 400;
+}
+
+/* UTILITIES > form */
+
+.form-check-input:checked {
+  background-color: var(--menoventi-1000);
+  border-color: var(--menoventi-1000);
+}
+
 /* GENERAL */
 
 * {
@@ -285,7 +343,7 @@ h6 {
 }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .pretitle {
@@ -315,14 +373,23 @@ a:hover {
   text-transform: uppercase;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-secondary {
   background: var(--menoventi-1000);
   border-color: var(--menoventi-1000);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary-active {
   background: var(--bluefresh-1000);
   border-color: var(--bluefresh-1000);
+}
+
+.btn-secondary:hover,
+.btn-secondary-active {
+  background: var(--light);
+  border-color: var(--light);
+  color: var(--menoventi-1000);
 }
 
 .btn-icon-link {
@@ -411,9 +478,8 @@ nav>div>div>ul:nth-child(2) img {
 
 /* ABOUT US > locations */
 
-.locations>.container>.row:last-child>.col>* {
-  height: 8rem;
-  width: auto;
+.locations svg {
+  height: 6rem;
 }
 
 /* ABOUT US > team */
@@ -422,17 +488,22 @@ nav>div>div>ul:nth-child(2) img {
   fill: var(--piuquattro-400);
 }
 
-.team>.container:first-child svg {
+.team .sevenDots svg {
   height: 4rem;
   width: auto;
-  margin-block: 4rem;
+  margin-top: 1rem;
 }
 
-.team>.container-fluid {
-  margin-block: 8rem;
+.team .sevenDots {
+  padding-bottom: 8rem;
 }
 
-.team>.container-fluid:last-child svg {
+.team .andNowContainer {
+  padding-block: 8rem;
+}
+
+.team .andNowContainer svg {
+  margin-top: 1rem;
   max-height: 14rem;
   padding: 0;
 }
@@ -441,7 +512,9 @@ nav>div>div>ul:nth-child(2) img {
 
 /* OUR SERVICES > general */
 
-.logisticsServices .sectionTitle svg, .customsServices .sectionTitle svg, .transportServices .sectionTitle svg {
+.logisticsServices .sectionTitle svg,
+.customsServices .sectionTitle svg,
+.transportServices .sectionTitle svg {
   width: 3rem;
 }
 
@@ -532,15 +605,38 @@ nav>div>div>ul:nth-child(2) img {
 
 /* OUR SERVICES > Transport > flags */
 
-.transportServices .flags{
+.transportServices .flags {
   background: var(--menoventi-100);
   width: 24rem;
 }
 
-.transportServices .flags ul li svg{
+.transportServices .flags ul li svg {
   width: 2rem;
 }
 
 /* DOCUMENTS */
 
-/* DOCUMENTS > accordion */
+/* CONTACTS */
+
+.contact .phoneContact p::before {
+  content: "☎️ ";
+  display: inline-block;
+  width: 2.2rem;
+  margin-left: -2.2rem;
+  font-size: 1.5rem;
+}
+
+.contact .officeLocations h3::before {
+  content: "📍 ";
+  display: inline-block;
+  width: 2rem;
+  margin-left: -2rem;
+  font-size: 1.5rem;
+}
+
+/* FOOTER */
+
+footer .logo svg,
+footer .logo path {
+  fill: var(--light);
+}

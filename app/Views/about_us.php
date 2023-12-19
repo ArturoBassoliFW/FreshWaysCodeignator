@@ -1,10 +1,16 @@
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb align-items-center">
-      <li class="breadcrumb-item"><a href="home_page"><img src="<?php echo 'asset/images/svg/home.svg'; ?>" style="width: 1.2rem;" alt="Home icon" /></a></li>
-      <li class="breadcrumb-item active" aria-current="page">About us</li>
-    </ol>
-  </nav>
+<div class="bg-menoventi100">
+  <div class="container">
+    <div class="row">
+      <div class="col mt-5">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb align-items-center">
+            <li class="breadcrumb-item"><a href="home_page"><img src="<?php echo 'asset/images/svg/home.svg'; ?>" style="width: 1.2rem;" alt="Home icon" /></a></li>
+            <li class="breadcrumb-item active" aria-current="page">About us</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
 <main>
   <h1 class="visually-hidden">About us</h1>
@@ -57,22 +63,18 @@
           <h2 class="text-big mb-4">Our locations</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col d-flex justify-content-between align-items-center gap-3">
-          <?php echo file_get_contents('asset/images/svg/flags/it.svg'); ?>
-          <?php echo file_get_contents('asset/images/svg/flags/uk.svg'); ?>
-          <div class="d-flex justify-content-between align-items-center">
-            <p class="bold text-big">Next to come...</p>
-          </div>
-        </div>
+      <div class="row justify-content-between">
+        <div class="col-auto"><?php echo file_get_contents('asset/images/svg/flags/it.svg'); ?></div>
+        <div class="col-auto"><?php echo file_get_contents('asset/images/svg/flags/uk.svg'); ?></div>
+        <div class="col-auto"><p class="bold text-big">Next to come...</p></div>
       </div>
     </div>
   </section>
   <section class="team sectionNoSpaceUp">
     <div class="container">
-      <div class="row">
+      <div class="row sevenDots">
         <div class="col">
-          <p class="m-0">There where 7 of us</p>
+          <p class="text-large">There where <span class="bold">7 of us</span></p>
           <?php echo file_get_contents('asset/images/svg/sevenDots.svg'); ?>
         </div>
       </div>
@@ -85,11 +87,21 @@
           </p>
         </div>
       </div>
-      <p>And now...</p>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-auto w-100 p-0"><?php echo file_get_contents('asset/images/svg/lotDots.svg'); ?></div>
+    <div class="andNowContainer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="bold text-large">And now...</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-auto w-100 p-0">
+            <?php echo file_get_contents('asset/images/svg/lotDots.svg'); ?>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -104,9 +116,9 @@
           </p>
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col d-flex flex-column justify-content-center align-items-center">
-          <p class="bold mb-4">💪 join the fresh ways team</p>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-auto text-cemter">
+          <p class="bold mb-4">💪 join the fresh ways teamteamteamteamteamteamteamteamteamteam</p>
           <a class="d-grid d-lg-block" href="">
             <button type="button" class="btn btn-primary">View all services</button>
           </a>
