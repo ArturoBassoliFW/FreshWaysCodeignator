@@ -16,6 +16,20 @@
         </div>
         <div class="col-6 logo">
           <h2 class="bold text-large cl-light mb-3">Rimani aggiornato</h2>
+
+          <?= form_open(); ?>
+
+          <div class="form-group">
+            <label for="email" class="cl-light mb-1">Email*</label>
+            <input type="email" class="form-control" id="email" value="<?= set_value('uname')?>">
+          </div>
+          <div class="form-group form-check mt-2">
+            <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+            <label class="form-check-label cl-light" for="privacyCheck">I agree to the <a href="#">privacy policy</a></label>
+          </div>
+
+          <?= form_close(); ?>
+
           <form>
             <div class="form-group">
               <label for="email" class="cl-light mb-1">Email*</label>

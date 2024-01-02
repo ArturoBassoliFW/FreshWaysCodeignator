@@ -6,7 +6,7 @@
     <section class="whoWeAre">
         <div class="container">
             <div class="row">
-                <div class="sectionImage col-lg order-lg-2 d-flex justify-content-center align-items-center">
+                <div class="sectionImage col-lg order-lg-2 d-flex justify-content-center align-items-center mb-5 mb-lg-0">
                     <img style="width: 80%;" src="<?php echo 'asset/images/svg/whoWeAre.svg'; ?>" alt="Our Team Image" />
                 </div>
                 <div class="sectionContent col-lg order-lg-1">
@@ -92,7 +92,7 @@
     <section class="portalLogin">
         <div class="container">
             <div class="row">
-                <div class="sectionImage col-lg order-lg-1 d-flex justify-content-center align-items-center">
+                <div class="sectionImage col-lg order-lg-1 d-flex justify-content-center align-items-center mb-5 mb-lg-0">
                     <img style="width: 80%;" src="<?php echo 'asset/images/svg/portalLogin.svg'; ?>" alt="Login to our customer portal" />
                 </div>
                 <div class="sectionContent col-lg order-lg-2">

@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="sectionImage col-lg order-lg-1 d-flex justify-content-center align-items-center cloudTail">
+        <div class="sectionImage col-lg order-lg-1 d-flex justify-content-center align-items-center cloudTail d-none d-lg-inline">
           <?php echo file_get_contents('asset/images/svg/cloudTail.svg'); ?>
         </div>
         <div class="sectionContent col-lg order-lg-2">
@@ -43,7 +43,7 @@
   <section class="offices"  id="offices">
     <div class="container">
       <div class="row">
-        <div class="sectionImage col-lg order-lg-2 d-flex justify-content-center align-items-center">
+        <div class="sectionImage col-lg order-lg-2 d-flex justify-content-center align-items-center mb-5 mb-lg-0">
           <img style="width: 80%;" src="asset/images/offices.png" alt="Our offices" />
         </div>
         <div class="sectionContent col-lg order-lg-1">
@@ -64,13 +64,13 @@
         </div>
       </div>
       <div class="row justify-content-between">
-        <div class="col-auto"><?php echo file_get_contents('asset/images/svg/flags/it.svg'); ?></div>
-        <div class="col-auto"><?php echo file_get_contents('asset/images/svg/flags/uk.svg'); ?></div>
-        <div class="col-auto"><p class="bold text-big">Next to come...</p></div>
+        <div class="col-sm col-lg-auto py-3 py-sm-0"><?php echo file_get_contents('asset/images/svg/flags/it.svg'); ?></div>
+        <div class="col-sm col-lg-auto py-3 py-sm-0"><?php echo file_get_contents('asset/images/svg/flags/uk.svg'); ?></div>
+        <div class="col-sm col-lg-auto py-3 py-sm-0"><p class="bold text-big">Next to come...</p></div>
       </div>
     </div>
   </section>
-  <section class="team sectionNoSpaceUp"  id="team">
+  <section class="team sectionNoSpaceUp sectionNoSpaceDown"  id="team">
     <div class="container">
       <div class="row sevenDots">
         <div class="col">
@@ -117,7 +117,7 @@
         </div>
       </div>
       <div class="row mt-5 justify-content-center">
-        <div class="col-auto text-cemter">
+        <div class="col-auto text-center">
           <p class="bold mb-4">💪 join the fresh ways teamteamteamteamteamteamteamteamteamteam</p>
           <a class="d-grid d-lg-block" href="">
             <button type="button" class="btn btn-primary">View all services</button>

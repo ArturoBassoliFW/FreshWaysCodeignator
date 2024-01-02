@@ -318,6 +318,12 @@ section {
   padding-block: 8rem;
 }
 
+@media only screen and (max-width: 992px) {
+  section {
+    padding-block: 3rem;
+  }
+}
+
 .container {
   width: 65rem;
 }
@@ -415,6 +421,10 @@ nav>div>div>ul:nth-child(2) img {
   height: 1.5rem;
 }
 
+li.nav-item > a {
+  text-align: center;
+}
+
 li.nav-item a::before {
   display: block;
   content: attr(title);
@@ -457,6 +467,12 @@ li.nav-item a::before {
   fill: var(--light);
 }
 
+@media only screen and (max-width: 576px) {
+  .servicesOffered .container .row:nth-child(2) {
+    margin-inline: 0;
+  }
+}
+
 /* ABOUT US */
 
 /* ABOUT US > companyHistory */
@@ -467,6 +483,12 @@ li.nav-item a::before {
 
 .companyHistory .cloudHistoryContainer {
   padding: 0 8rem 8rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .companyHistory .cloudHistoryContainer {
+    padding: 0 0 6rem;
+}
 }
 
 .companyHistory>div:first-child svg {
@@ -493,6 +515,18 @@ li.nav-item a::before {
 
 .locations svg {
   height: 6rem;
+}
+
+
+@media only screen and (max-width: 576px) {
+  .locations .container .row:nth-child(2) {
+    flex-direction: column;
+  }
+  .locations .container .row:nth-child(2) > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* ABOUT US > team */
@@ -534,11 +568,6 @@ li.nav-item a::before {
 .sectionTitle h2 {
   width: auto;
   margin: 0;
-}
-
-.ourServices .plusInfo .col-auto {
-  width: 12rem;
-  text-align: center;
 }
 
 .ourServices .plusInfo svg {
@@ -592,7 +621,6 @@ li.nav-item a::before {
 
 .transportServices .circular {
   aspect-ratio: 1/1;
-  width: 10rem;
 }
 
 .transportServices .circular:nth-child(1) {
@@ -619,12 +647,29 @@ li.nav-item a::before {
 /* OUR SERVICES > Transport > flags */
 
 .transportServices .flags {
-  background: var(--menoventi-100);
-  width: 24rem;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 32px);
+  grid-template-rows: repeat(4, 24px);
+  gap: 1rem;
 }
 
-.transportServices .flags ul li svg {
+.transportServices .flags div {
+  background-color: lightblue;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.transportServices .flags svg {
   width: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .transportServices .flags {
+    margin-inline: auto;
+  }
 }
 
 /* DOCUMENTS */
@@ -644,6 +689,12 @@ li.nav-item a::before {
   width: 2rem;
   margin-left: -2rem;
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .officeLocations .officeContacts {
+    padding-left: 2rem;
+  }
 }
 
 /* FOOTER */

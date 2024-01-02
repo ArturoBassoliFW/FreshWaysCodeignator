@@ -28,7 +28,7 @@
             <span class="pretitle">Everything you need</span>
             <h2 class="text-big">Useful documents</h2>
           </div>
-          <div class="row">
+          <div class="row gap-4 officeContacts">
             <div class="location col-lg">
               <h3 class="text-large">Bernareggio</h3>
               <a href="tel:+39039635891">
