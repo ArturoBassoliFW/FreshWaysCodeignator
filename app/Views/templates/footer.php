@@ -31,12 +31,12 @@
       </div>
     </div>
   </div>
-  <div class="bg-light py-2">
-    <div class="container">
+  <div class="bg-bluefresh1000 py-2">
+    <div class="container disclaimer">
       <div class="row justify-content-center align-items-center">
         <div class="col-auto text-center">
           <p class="text-small">Tutti i contenuti intellettuali del sito sono di esclusiva proprietà di Fresh Ways Srl</p>
-          <span class="text-small"><a href="#">P.Iva IT05392140967</a> - <a href="">privacy</a> - <a href="">coockie policy</a> - <a href="">note legali</a> - <a href="">adozione del modello 231</a></span>
+          <span class="text-small cl-light"><a href="#">P.Iva IT05392140967</a> - <a href="">Privacy</a> - <a href="">Coockie policy</a> - <a href="">Note legali</a> - <a href="">Adozione del modello 231</a></span>
         </div>
       </div>
     </div>

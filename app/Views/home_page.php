@@ -15,7 +15,7 @@
                     <p>Explore the journey of Fresh Ways, from our humble beginnings to where we stand today. Learn about our history and the values that drive us.<br><br>
                         Meet the dedicated individuals who power Fresh Ways. Uncover the heart of our operations at our headquarters. Discover more about our team and the passion that fuels our logistics services.
                     </p>
-                    <a class="d-grid d-lg-block mt-4" href="">
+                    <a class="d-grid d-lg-block mt-4" href="about_us">
                         <button type="button" class="btn btn-primary">Discover Fresh Ways</button>
                     </a>
                 </div>
@@ -39,7 +39,7 @@
                         </div>
                         <p class="cl-light">Optimise and streamline your supply chain with our integrated logistics solutions. Our experienced team, state-of-the-art headquarters and rich history of success ensure Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it'sOur highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's...
                         </p>
-                        <a class="icon-link icon-link-hover mt-4" href="#">
+                        <a class="icon-link icon-link-hover mt-4" href="our_services#logistic">
                             <button type="button" class="btn btn-icon-link cl-light">Learn more</button>
                             <div class="bi" alt="right arrow" aria-hidden="true">
                                 <?php echo file_get_contents('asset/images/svg/arrowRight.svg'); ?>
@@ -55,7 +55,7 @@
                         </div>
                         <p class="cl-light">Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's Our highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it'sOur highly skilled team of customs clearance experts, with years of experience, ensures smooth and efficient operations throughout the entire logistics process, whether it's
                         </p>
-                        <a class="icon-link icon-link-hover mt-4" href="#">
+                        <a class="icon-link icon-link-hover mt-4" href="our_services#customs">
                             <button type="button" class="btn btn-icon-link cl-light">Learn more</button>
                             <div class="bi" alt="right arrow" aria-hidden="true">
                                 <?php echo file_get_contents('asset/images/svg/arrowRight.svg'); ?>
@@ -71,7 +71,7 @@
                         </div>
                         <p class="cl-light">At Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to your At Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to yourAt Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to yourAt Fresh Ways, our commitment goes beyond the ordinary. We pride ourselves on providing exceptionally reliable transport services, each one meticulously tailored to your...
                         </p>
-                        <a class="icon-link icon-link-hover mt-4" href="#">
+                        <a class="icon-link icon-link-hover mt-4" href="our_services#transport">
                             <button type="button" class="btn btn-icon-link cl-light">Learn more</button>
                             <div class="bi" alt="right arrow" aria-hidden="true">
                                 <?php echo file_get_contents('asset/images/svg/arrowRight.svg'); ?>
@@ -82,7 +82,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col d-flex justify-content-center align-items-center">
-                    <a class="d-grid d-lg-block" href="">
+                    <a class="d-grid d-lg-block" href="our_services">
                         <button type="button" class="btn btn-primary">View all services</button>
                     </a>
                 </div>

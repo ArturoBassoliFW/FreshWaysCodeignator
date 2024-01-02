@@ -49,7 +49,7 @@
   </section>
   <div class="container-fluid hr hr1">
   </div>
-  <section class="logisticsServices">
+  <section class="logisticsServices" id="logistic">
     <div class="container">
       <div class="row">
         <div class="col d-flex align-items-center sectionTitle gap-2">
@@ -113,7 +113,7 @@
   </section>
   <div class="container-fluid hr hr2">
   </div>
-  <section class="customsServices">
+  <section class="customsServices"  id="customs">
     <div class="container">
       <div class="row">
         <div class="col d-flex align-items-center sectionTitle gap-2">
@@ -138,7 +138,7 @@
   </section>
   <div class="container-fluid hr hr3">
   </div>
-  <section class="transportServices">
+  <section class="transportServices"  id="transport">
     <div class="container">
       <div class="row">
         <div class="col d-flex align-items-center sectionTitle gap-2">

@@ -27,30 +27,31 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0 align-items-center">
           <li class="nav-item">
-          <a href="home_page" <?php if($active=="home_page") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> >Home</a>
+          <a href="home_page" <?php if($active == "home_page" || empty($active)) {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> title="Home">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a  <?php if($active=="about_us") {echo 'class="nav-link dropdown-toggle active"';} else {echo 'class="nav-link dropdown-toggle"';}?> href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a  <?php if($active=="about_us") {echo 'class="nav-link dropdown-toggle active"';} else {echo 'class="nav-link dropdown-toggle"';}?> href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="About us">
               About us
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="about_us">The company</a></li>
-              <li><a class="dropdown-item" href="about_us">The offices</a></li>
-              <li><a class="dropdown-item" href="about_us">The team</a></li>
+              <li><a class="dropdown-item" href="about_us">Company</a></li>
+              <li><a class="dropdown-item" href="about_us#offices">Offices</a></li>
+              <li><a class="dropdown-item" href="about_us#team">Team</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a <?php if($active=="our_services") {echo 'class="nav-link dropdown-toggle active"';} else {echo 'class="nav-link dropdown-toggle"';}?> href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a <?php if($active=="our_services") {echo 'class="nav-link dropdown-toggle active"';} else {echo 'class="nav-link dropdown-toggle"';}?> href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Our Services">
               Our Services
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="our_services">Logistics</a></li>
-              <li><a class="dropdown-item" href="our_services">Customs</a></li>
-              <li><a class="dropdown-item" href="our_services">Transport</a></li>
+              <li><a class="dropdown-item" href="our_services">Overviewe</a></li>
+              <li><a class="dropdown-item" href="our_services#logistic">Logistics</a></li>
+              <li><a class="dropdown-item" href="our_services#customs">Customs</a></li>
+              <li><a class="dropdown-item" href="our_services#transport">Transport</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a <?php if($active=="documents") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="documents">Useful documents</a>
+            <a <?php if($active=="documents") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="documents" title="Useful documents">Useful documents</a>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
@@ -65,7 +66,7 @@
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Language">
               Language
             </a>
             <ul class="dropdown-menu">

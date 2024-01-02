@@ -415,6 +415,15 @@ nav>div>div>ul:nth-child(2) img {
   height: 1.5rem;
 }
 
+li.nav-item a::before {
+  display: block;
+  content: attr(title);
+  font-weight: 900;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 /* HOME */
 
 /* HOME > Hero image */
@@ -451,6 +460,10 @@ nav>div>div>ul:nth-child(2) img {
 /* ABOUT US */
 
 /* ABOUT US > companyHistory */
+
+.companyHistory {
+  padding-top: 2rem;
+}
 
 .companyHistory .cloudHistoryContainer {
   padding: 0 8rem 8rem;
@@ -622,7 +635,6 @@ nav>div>div>ul:nth-child(2) img {
   content: "☎️ ";
   display: inline-block;
   width: 2.2rem;
-  margin-left: -2.2rem;
   font-size: 1.5rem;
 }
 
@@ -639,4 +651,21 @@ nav>div>div>ul:nth-child(2) img {
 footer .logo svg,
 footer .logo path {
   fill: var(--light);
+}
+
+/* FOOTER > disclaimer */
+
+footer .disclaimer p,
+footer .disclaimer span,
+footer .disclaimer a {
+  color: var(--bluefresh-700);
+}
+
+footer .disclaimer a {
+  text-decoration: underline;
+  transition: all .15s ease-in-out
+}
+
+footer .disclaimer a:hover {
+  color: var(--bluefresh-400);
 }

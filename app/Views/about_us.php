@@ -40,7 +40,7 @@
       </div>
     </div>
   </section>
-  <section class="offices">
+  <section class="offices"  id="offices">
     <div class="container">
       <div class="row">
         <div class="sectionImage col-lg order-lg-2 d-flex justify-content-center align-items-center">
@@ -70,7 +70,7 @@
       </div>
     </div>
   </section>
-  <section class="team sectionNoSpaceUp">
+  <section class="team sectionNoSpaceUp"  id="team">
     <div class="container">
       <div class="row sevenDots">
         <div class="col">
