@@ -10,6 +10,71 @@
     </div>
   </div>
 </div>
+
+<section class="contactForm">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <h2 class="bold text-large mb-3">Contact Us</h2>
+
+        <?= form_open('contact_us_form', ['id' => 'contact_us_form']) ?>
+
+        <?= form_hidden('current_page', current_url()); ?>
+
+        <div class="form-group">
+          <?= form_label('Email*', 'email', ['class' => 'mb-1']) ?>
+          <?= form_input([
+            'type' => 'email',
+            'name' => 'email',
+            'id' => 'email',
+            'class' => 'form-control',
+            'placeholder' => 'your@email.com',
+            'value' => session()->get('form_name') == 'contact_us_form' && isset(session()->get('form_data')['email']) ? session()->get('form_data')['email'] : '',
+          ]) ?>
+          <?php if ($errors = session()->get('contact_us_form_errors')) : ?>
+            <div class="error"><?= $errors['email'] ?? '' ?></div>
+          <?php endif; ?>
+        </div>
+
+        <div class="form-group">
+          <?= form_label('Company Name', 'companyName', ['class' => 'mb-1']) ?>
+          <?= form_input([
+            'type' => 'text',
+            'name' => 'companyName',
+            'id' => 'companyName',
+            'class' => 'form-control',
+            'placeholder' => 'Your Company Name',
+            'value' => session()->get('form_name') == 'contact_us_form' && isset(session()->get('form_data')['companyName']) ? session()->get('form_data')['companyName'] : '',
+          ]) ?>
+          <?php if ($errors = session()->get('contact_us_form_errors')) : ?>
+            <div class="error"><?= $errors['companyName'] ?? '' ?></div>
+          <?php endif; ?>
+        </div>
+
+        <div class="form-group">
+          <?= form_label('Inquiry Type*', 'inquiryType', ['class' => 'mb-1']) ?>
+          <?= form_dropdown(
+            'inquiryType',
+            ['' => 'Select Inquiry Type', 'transport' => 'Transport', 'logistic' => 'Logistic', 'customer' => 'Customer', 'other' => 'Other'],
+            session()->get('form_name') == 'contact_us_form' && isset(session()->get('form_data')['inquiryType']) ? session()->get('form_data')['inquiryType'] : '',
+            'class="form-control"'
+          ) ?>
+          <?php if ($errors = session()->get('contact_us_form_errors')) : ?>
+            <div class="error"><?= $errors['inquiryType'] ?? '' ?></div>
+          <?php endif; ?>
+        </div>
+
+        <?= form_submit('mysubmit', 'Submit', 'class="btn btn-secondary mt-4"') ?>
+
+        <?= form_close() ?>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="contact">
   <div class="container phoneContact">
     <div class="row">

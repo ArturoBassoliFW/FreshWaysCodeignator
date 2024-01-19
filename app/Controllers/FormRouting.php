@@ -17,64 +17,92 @@ class FormRouting extends TemplateLoader
 
         // Check which form is submitting
 
+        // Create an instance of YourClass
+        $instance = new FormRouting;
 
         // Contact us form
         if ($formCapture == 'contact_us_form') {
+
+            // Validation rules
+            $formFields = [
+                'email' => 'required|max_length[254]|valid_email',
+                'companyName' => 'required',
+                'inquiryType' => 'required|not_in_list[Select Inquiry Type]',
+            ];
+            return $instance->process_form($formFields, 'contact_us_form', $this->request);
         }
-
         // Footer form
-        elseif ($formCapture == 'footer_form') { 
+        elseif ($formCapture == 'footer_form') {
+            // Existing validation rules for the footer form
+            $formFields = [
+                'email' => 'required|max_length[254]|valid_email',
+                'privacyCheck' => 'required',
+            ];
 
-            // Setting rules
-            $validation = \Config\Services::validation();
-
-            $validation->setRule('email', 'Email', 'required|max_length[254]|valid_email', [
-                'required' => '⚠️The email field is required.',
-                'max_length' => '⚠️The email field cannot exceed 254 characters in length.',
-                'valid_email' => '⚠️The email field must contain a valid email address.',
-            ]);
-
-            $validation->setRule('privacyCheck', 'Privacy Check', 'required', [
-                'required' => '⚠️You must agree to the privacy policy.',
-            ]);
-
-            $fieldNames = ['email', 'privacyCheck'];
-
-            // Getting data
-            $data = $this->request->getPost($fieldNames);
-            $current_page = $this->getCurrentPage();
-
-            // If error in validation
-            if (!$validation->run($data)) {
-                
-                $this->session->setFlashdata('form_error', TRUE);
-
-                // Store the errors in the session
-                $this->session->setFlashdata('errors', \Config\Services::validation()->getErrors());
-
-                // Store the form data in the session
-                $this->session->setFlashdata('form_data', $data);
-
-                // Redirect to the page where the form was submitted
-                $current_page .= '#footerForm';
-                return redirect()->to($current_page);
-            }
-
-            // Call the email sending function
-            $this->send_email();
-            $this->session->set('success', 'Subscription sent successfully. You will receive an email shortly.');
-
-            // Redirect to a specific URL
-            return redirect()->to($current_page);
-        } else {
+            return $instance->process_form($formFields, 'footer_form', $this->request);
+        } 
+        
+        else {
             return view('about_us');
         }
     }
 
-    // Get the current page without
-    public function getCurrentPage()
+    // Process the forms
+    public function process_form($formFields, $formName, $request)
     {
-        $current_page = $this->request->getPost('current_page');        
+
+        // Setting rules
+        $validation = \Config\Services::validation();
+
+        foreach ($formFields as $field => $rules) {
+            $validation->setRule($field, ucfirst($field), $rules);
+        }
+
+        // Getting data
+        $data = $request->getPost(array_keys($formFields));
+        $current_page = $this->getCurrentPage($request);
+
+
+        // If error in validation
+        if (!$validation->run($data)) {
+
+            $this->session->setFlashdata('form_error', TRUE);
+
+            // Get form name
+            $formNameKey = $formName . '_errors';
+
+            // Store the errors in the session with a unique key
+            $this->session->setFlashdata($formNameKey, $validation->getErrors());
+
+            // Store the form data in the session
+            $this->session->set('form_data', $data);
+
+            // Store the form name in the session
+            $this->session->set('form_name', $formName);
+
+            // Redirect to the page where the form was submitted
+            $current_page .= '#' . $formName;
+            return redirect()->to($current_page);
+        }
+
+        // Call the email sending function
+        $this->send_email();
+        $this->session->set('success', 'Subscription sent successfully. You will receive an email shortly.');
+
+
+        // Clear all flash data before redirecting
+        $this->session->remove('form_error');
+        $this->session->set('form_data', []);
+
+        // Redirect to a specific URL
+        return redirect()->to($current_page);
+    }
+
+
+    // Get the current page without
+    public function getCurrentPage($request)
+    {
+        $current_page = $request->getPost('current_page');
         return $this->removeIndex($current_page);
     }
 
@@ -93,6 +121,5 @@ class FormRouting extends TemplateLoader
     // Send the email
     public function send_email()
     {
-
     }
 }

@@ -24,7 +24,7 @@ $routes->post('/vcard', 'VCard::form_controller/$1');
 
 
 $routes->get('/([a-zA-Z0-9-_]+)/', 'InnerPageRouting::innerRouting/$1');
-$routes->post('/([a-zA-Z0-9-_]+)/', 'FormRoutingCopy::form_controller/$1');
+$routes->post('/([a-zA-Z0-9-_]+)/', 'FormRouting::form_controller/$1');
 
 
  /* Index handling route */

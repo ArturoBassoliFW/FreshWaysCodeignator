@@ -2,7 +2,7 @@
   <div class="py-5 bg-bluefresh1000">
     <div class="container my-5">
       <div class="row justify-content-between align-items-center">
-        
+
 
         <!-- Logo and social -->
 
@@ -27,7 +27,7 @@
         <div class="col-lg-6 logo">
           <h2 class="bold text-large cl-light mb-3">Rimani aggiornato</h2>
 
-          <?= form_open('footer_form', ['id' => 'footerForm']) ?>
+          <?= form_open('footer_form', ['id' => 'footer_form']) ?>
 
           <?= form_hidden('current_page', current_url()); ?>
 
@@ -39,23 +39,26 @@
               'id' => 'email',
               'class' => 'form-control',
               'placeholder' => 'latua@email.com',
-              'value' => session()->getFlashdata('form_data') ? session()->getFlashdata('form_data')['email'] : '',  // Add this line
+              'value' => (session()->get('form_name') == 'footer_form' && isset(session()->get('form_data')['email']) && session()->get('form_data')['email'] != '') ? session()->get('form_data')['email'] : '',
             )) ?>
-            <?php if ($errors = session()->getFlashdata('errors')) : ?>
+
+
+            <?php if ($errors = session()->getFlashdata('footer_form_errors')) : ?>
               <div class="error"><?= $errors['email'] ?? '' ?></div>
             <?php endif; ?>
           </div>
+
           <div class="form-group form-check mt-2">
             <?= form_checkbox(array(
               'name' => 'privacyCheck',
               'id' => 'privacyCheck',
               'class' => 'form-check-input',
               'value' => '1',
-              'checked' => session()->getFlashdata('form_data') && session()->getFlashdata('form_data')['privacyCheck'] == '1' ? TRUE : FALSE,  // Add this line
+              'checked' => session()->get('form_name') == 'footer_form' && isset(session()->get('form_data')['privacyCheck']) && session()->get('form_data')['privacyCheck'] == '1' ? TRUE : FALSE,
             )) ?>
             <?= form_label('I agree to the <a href="#">privacy policy</a>', 'privacyCheck', array('class' => 'form-check-label cl-light')) ?>
           </div>
-          <?php if ($errors = session()->getFlashdata('errors')) : ?>
+          <?php if ($errors = session()->getFlashdata('footer_form_errors')) : ?>
             <div class="error"><?= $errors['privacyCheck'] ?? '' ?></div>
           <?php endif; ?>
 
