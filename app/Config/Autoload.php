@@ -98,5 +98,23 @@ class Autoload extends AutoloadConfig
      * @var string[]
      * @phpstan-var list<string>
      */
-    public $helpers = ['form'];
+    public $helpers = [
+        'form',
+    ];
+
+    /**
+     * -------------------------------------------------------------------
+     * Libraries
+     * -------------------------------------------------------------------
+     * Prototype:
+     *   $libraries = [
+     *       'session',
+     *   ];
+     *
+     * @var string[]
+     * @phpstan-var list<string>
+     */
+    public $libraries = [
+        'session', 'database'
+    ];
 }

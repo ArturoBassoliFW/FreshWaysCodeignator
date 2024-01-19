@@ -2,7 +2,7 @@
     <img src="https://picsum.photos/1920/1080" alt="My SVG Image" />
 </div>
 <main>
-    <h1 class="visually-hidden">Fresh Ways home page</h1>
+    <h1 class=" visually-hidden">Fresh Ways home page</h1>
     <section class="whoWeAre">
         <div class="container">
             <div class="row">

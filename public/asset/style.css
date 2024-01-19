@@ -307,6 +307,29 @@ ul {
   border-color: var(--menoventi-1000);
 }
 
+.successMessageBg {
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(32, 30, 82, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.successMessageDialog {
+  background: var(--bluefresh-100);
+}
+
+.successMessageDialog .dialogContent {
+  padding: 4rem;
+}
+
+.successMessageDialog #progressBar {
+  width: 0%;
+  height: .5rem;
+  background: var(--bluefresh-1000);
+}
+
 /* GENERAL */
 
 * {
@@ -421,7 +444,7 @@ nav>div>div>ul:nth-child(2) img {
   height: 1.5rem;
 }
 
-li.nav-item > a {
+li.nav-item>a {
   text-align: center;
 }
 
@@ -488,7 +511,7 @@ li.nav-item a::before {
 @media only screen and (max-width: 992px) {
   .companyHistory .cloudHistoryContainer {
     padding: 0 0 6rem;
-}
+  }
 }
 
 .companyHistory>div:first-child svg {
@@ -522,7 +545,8 @@ li.nav-item a::before {
   .locations .container .row:nth-child(2) {
     flex-direction: column;
   }
-  .locations .container .row:nth-child(2) > div {
+
+  .locations .container .row:nth-child(2)>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -699,6 +723,14 @@ li.nav-item a::before {
 
 /* FOOTER */
 
+footer .logo svg {
+  max-width: 20rem;
+}
+
+footer .social img {
+  width: 2rem;
+}
+
 footer .logo svg,
 footer .logo path {
   fill: var(--light);
@@ -720,3 +752,11 @@ footer .disclaimer a {
 footer .disclaimer a:hover {
   color: var(--bluefresh-400);
 }
+
+footer form .error {
+  color: var(--light);
+}
+
+/* FORMS */
+
+/* FORMS > error */

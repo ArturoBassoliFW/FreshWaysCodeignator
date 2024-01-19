@@ -2,49 +2,75 @@
   <div class="py-5 bg-bluefresh1000">
     <div class="container my-5">
       <div class="row justify-content-between align-items-center">
-        <div class="col-3">
+        
+
+        <!-- Logo and social -->
+
+
+        <div class="col-lg-3">
           <div class="logo mb-4"><?php echo file_get_contents('asset/images/svg/FreshWaysLogo.svg'); ?></div>
-          <p class="bold text-regular cl-light mb-2">Seguici</p>
-          <div class="row">
-            <div class="col-3">
+          <p class="bold text-regular clgight mb-2">Seguici</p>
+          <div class="row social">
+            <div class="col-auto col-lg-3">
               <img src="asset/images/svg/linkedinLogo.svg" alt="Linkedin">
             </div>
-            <div class="col-3">
+            <div class="col-auto col-lg-3">
               <img src="asset/images/svg/instagramLogo.svg" alt="Instagram">
             </div>
           </div>
         </div>
-        <div class="col-6 logo">
+
+
+        <!-- Footer form -->
+
+
+        <div class="col-lg-6 logo">
           <h2 class="bold text-large cl-light mb-3">Rimani aggiornato</h2>
 
-          <?= form_open(); ?>
+          <?= form_open('footer_form', ['id' => 'footerForm']) ?>
+
+          <?= form_hidden('current_page', current_url()); ?>
 
           <div class="form-group">
-            <label for="email" class="cl-light mb-1">Email*</label>
-            <input type="email" class="form-control" id="email" value="<?= set_value('uname')?>">
+            <?= form_label('Email*', 'email', array('class' => 'cl-light mb-1')) ?>
+            <?= form_input(array(
+              'type' => 'email',
+              'name' => 'email',
+              'id' => 'email',
+              'class' => 'form-control',
+              'placeholder' => 'latua@email.com',
+              'value' => session()->getFlashdata('form_data') ? session()->getFlashdata('form_data')['email'] : '',  // Add this line
+            )) ?>
+            <?php if ($errors = session()->getFlashdata('errors')) : ?>
+              <div class="error"><?= $errors['email'] ?? '' ?></div>
+            <?php endif; ?>
           </div>
           <div class="form-group form-check mt-2">
-            <input type="checkbox" class="form-check-input" id="privacyCheck" required>
-            <label class="form-check-label cl-light" for="privacyCheck">I agree to the <a href="#">privacy policy</a></label>
+            <?= form_checkbox(array(
+              'name' => 'privacyCheck',
+              'id' => 'privacyCheck',
+              'class' => 'form-check-input',
+              'value' => '1',
+              'checked' => session()->getFlashdata('form_data') && session()->getFlashdata('form_data')['privacyCheck'] == '1' ? TRUE : FALSE,  // Add this line
+            )) ?>
+            <?= form_label('I agree to the <a href="#">privacy policy</a>', 'privacyCheck', array('class' => 'form-check-label cl-light')) ?>
           </div>
+          <?php if ($errors = session()->getFlashdata('errors')) : ?>
+            <div class="error"><?= $errors['privacyCheck'] ?? '' ?></div>
+          <?php endif; ?>
 
-          <?= form_close(); ?>
+          <?= form_submit('mysubmit', 'Subscribe', 'class="btn btn-secondary mt-4"') ?>
 
-          <form>
-            <div class="form-group">
-              <label for="email" class="cl-light mb-1">Email*</label>
-              <input type="email" class="form-control" id="email" placeholder="latua@email.com" required>
-            </div>
-            <div class="form-group form-check mt-2">
-              <input type="checkbox" class="form-check-input" id="privacyCheck" required>
-              <label class="form-check-label cl-light" for="privacyCheck">I agree to the <a href="#">privacy policy</a></label>
-            </div>
-            <button type="submit" class="btn btn-secondary mt-4">Subscribe</button>
-          </form>
+          <?= form_close() ?>
         </div>
       </div>
     </div>
   </div>
+
+
+  <!-- legal info -->
+
+
   <div class="bg-bluefresh1000 py-2">
     <div class="container disclaimer">
       <div class="row justify-content-center align-items-center">
@@ -56,6 +82,10 @@
     </div>
   </div>
 </footer>
+
+
+<!-- Scripts -->
+
 
 <script src="asset/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 <script src="asset/jquery/jquery.js"></script>
